@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="org.example.examenjunio.ExamenController">
+  <tabs>
+    <Tab text="Mostrar Correos">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="338.0" layoutY="37.0" text="Mensajes Recibidos">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="botonRecibidos" layoutX="87.0" layoutY="125.0" mnemonicParsing="false" onAction="#mostrarCoreosRecibidos" text="Recibidos" />
+                  <Button fx:id="botonEliminados" layoutX="81.0" layoutY="160.0" mnemonicParsing="false" onAction="#mostrarCoreosEliminados" text="Eliminados" />
+                  <TextArea fx:id="mostrarRecibidos" layoutX="213.0" layoutY="74.0" prefHeight="234.0" prefWidth="362.0" />
+                  <Button fx:id="salir" layoutX="92.0" layoutY="264.0" mnemonicParsing="false" onAction="#salir" text="Salir" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Añadir Correos">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="65.0" layoutY="29.0" text="Origen:" />
+                  <TextField fx:id="origen" layoutX="117.0" layoutY="25.0" prefHeight="26.0" prefWidth="436.0" />
+                  <Label layoutX="63.0" layoutY="67.0" text="Destino:" />
+                  <TextField fx:id="destino" layoutX="117.0" layoutY="63.0" prefHeight="26.0" prefWidth="436.0" />
+                  <Label layoutX="64.0" layoutY="99.0" text="Asunto:" />
+                  <TextField fx:id="asunto" layoutX="117.0" layoutY="95.0" prefHeight="26.0" prefWidth="436.0" />
+                  <TextField fx:id="mensaje" layoutX="30.0" layoutY="137.0" prefHeight="168.0" prefWidth="522.0" />
+                  <Button fx:id="crear" layoutX="463.0" layoutY="319.0" mnemonicParsing="false" onAction="#anadirCorreos" text="Crear" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Borrar Correos">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="191.0" layoutY="24.0" prefHeight="21.0" prefWidth="101.0" text="Borrar Correo">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="94.0" layoutY="62.0" text="Origen:" />
+                  <TextField fx:id="origenEliminar" layoutX="159.0" layoutY="58.0" prefHeight="26.0" prefWidth="394.0" />
+                  <Label layoutX="20.0" layoutY="109.0" text="Carpeta:" />
+                  <TextArea fx:id="mortrarEliminar" layoutX="200.0" layoutY="97.0" prefHeight="208.0" prefWidth="354.0" />
+                  <Button fx:id="aceptar" layoutX="46.0" layoutY="243.0" mnemonicParsing="false" onAction="#eliminarCorreos" text="Aceptar" />
+                  <Label fx:id="mensElimi" layoutX="59.0" layoutY="325.0" prefHeight="18.0" prefWidth="435.0" />
+                  <Button fx:id="recibido" layoutX="41.0" layoutY="143.0" mnemonicParsing="false" onAction="#email" text="Recibidos" />
+                  <Button fx:id="elimin" layoutX="38.0" layoutY="175.0" mnemonicParsing="false" onAction="#eliminados" text="Eliminados" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Mostrar 1er correo">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
